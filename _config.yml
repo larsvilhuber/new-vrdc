@@ -146,7 +146,6 @@ footer:
 include:
   - .htaccess
   - _pages
-  - /docs # ignore Minimal Mistakes /docs
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -173,6 +172,7 @@ exclude:
   - README
   - tmp
   - /test # ignore Minimal Mistakes /test
+  - /docs # ignore Minimal Mistakes /docs
 keep_files:
   - .git
   - .svn
@@ -266,6 +266,13 @@ compress_html:
   ignore:
     envs: development
 
+collections:
+  sds:
+      output: true
+      permalink: /data/:path/
+  access:
+      output: true
+      permalink: /synthetic-data-server/:path/
 
 # Defaults
 defaults:
